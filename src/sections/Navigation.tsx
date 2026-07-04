@@ -9,6 +9,8 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
   const navRef = useRef<HTMLElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [heroVisible, setHeroVisible] = useState(true);
+  const animatedRef = useRef(false);
 
   const navLinks = [
     { label: 'About', target: '#about' },
@@ -25,8 +27,28 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Hide navbar while hero is visible; reveal it once the user scrolls past
   useEffect(() => {
+    const hero = document.querySelector('#hero');
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHeroVisible(entry.isIntersecting);
+      },
+      // trigger when hero is >10% visible (so tiny slivers don't keep it hidden)
+      { threshold: 0.1 }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
+  // Run GSAP intro only once, the first time the navbar becomes visible
+  useEffect(() => {
+    if (heroVisible || animatedRef.current) return;
     if (!navRef.current) return;
+    animatedRef.current = true;
+
     const logo = navRef.current.querySelector('.nav-logo');
     const links = navRef.current.querySelectorAll('.nav-link');
     const cta = navRef.current.querySelector('.nav-cta');
@@ -34,21 +56,19 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
     gsap.fromTo(
       logo,
       { opacity: 0, y: -10 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
     );
-
     gsap.fromTo(
       links,
       { opacity: 0, y: -10 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.3, stagger: 0.05, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.6, delay: 0.08, stagger: 0.05, ease: 'power3.out' }
     );
-
     gsap.fromTo(
       cta,
       { opacity: 0, y: -10 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.5, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.6, delay: 0.25, ease: 'power3.out' }
     );
-  }, []);
+  }, [heroVisible]);
 
   const scrollTo = (target: string) => {
     setMobileOpen(false);
@@ -73,7 +93,10 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-          transition: 'background-color 0.3s ease',
+          transform: heroVisible ? 'translateY(-100%)' : 'translateY(0)',
+          opacity: heroVisible ? 0 : 1,
+          pointerEvents: heroVisible ? 'none' : 'auto',
+          transition: 'transform 0.45s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.35s ease, background-color 0.3s ease',
         }}
       >
         <div
@@ -96,7 +119,7 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
                 color: '#f4f4f5',
               }}
             >
-              Arcenox
+              Sophia
             </span>
             <span
               style={{

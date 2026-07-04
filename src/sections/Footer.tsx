@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 marginBottom: '4px',
               }}
             >
-              Arcenox
+              Sophia
             </span>
             <span
               style={{
@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '8px' }}>
                   <a
-                    href="mailto:hello@arcenox.dev"
+                    href="mailto:sophiasaquing16@gmail.com"
                     style={{
                       fontFamily: 'Inter, sans-serif',
                       fontWeight: 400,
@@ -181,7 +181,7 @@ const Footer: React.FC = () => {
                       (e.currentTarget.style.opacity = '0.6')
                     }
                   >
-                    hello@arcenox.dev
+                    sophiasaquing16@gmail.com
                   </a>
                 </li>
                 <li>
@@ -236,7 +236,7 @@ const Footer: React.FC = () => {
               opacity: 0.5,
             }}
           >
-            2026 Arcenox. All rights reserved.
+            2026 Sophia. All rights reserved.
           </span>
           <span
             style={{

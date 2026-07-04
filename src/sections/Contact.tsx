@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
         </p>
         <div className="contact-animate">
           <a
-            href="mailto:hello@arcenox.dev"
+            href="mailto:sophiasaquing16@gmail.com"
             className="gradient-btn inline-block"
             style={{
               padding: '16px 40px',
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="contact-animate" style={{ marginTop: '24px' }}>
           <a
-            href="mailto:hello@arcenox.dev"
+            href="mailto:sophiasaquing16@gmail.com"
             className="font-mono-code"
             style={{
               fontSize: '0.875rem',
@@ -126,11 +126,11 @@ const Contact: React.FC = () => {
               e.currentTarget.style.textDecoration = 'none';
             }}
           >
-            hello@arcenox.dev
+            sophiasaquing16@gmail.com
           </a>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
