@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -295,6 +295,23 @@ const SelectedWork: React.FC = () => {
 
   const selected = selectedIdx >= 0 ? projects[selectedIdx] : null;
 
+  // Generate stable star positions once
+  const stars = useMemo(() => {
+    const out = [];
+    for (let i = 0; i < 120; i++) {
+      // Simple seeded-ish spread using index
+      out.push({
+        left: `${(((i * 7919 + 31) % 1000) / 10).toFixed(2)}%`,
+        top:  `${(((i * 6271 + 17) % 1000) / 10).toFixed(2)}%`,
+        size: 0.5 + ((i * 3491) % 100) / 100,
+        opacity: 0.15 + ((i * 2833) % 50) / 100,
+        delay: `${((i * 1447) % 4000) / 1000}s`,
+        duration: `${3 + ((i * 2039) % 3000) / 1000}s`,
+      });
+    }
+    return out;
+  }, []);
+
   return (
     <section
       id="portfolio"
@@ -311,7 +328,42 @@ const SelectedWork: React.FC = () => {
           0%, 100% { transform: scale(1); opacity: 0.8; }
           50% { transform: scale(1.15); opacity: 1; }
         }
+        @keyframes star-twinkle {
+          0%, 100% { opacity: var(--star-base-opacity); }
+          50% { opacity: calc(var(--star-base-opacity) * 0.25); }
+        }
       `}</style>
+
+      {/* Starfield background */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0,
+          overflow: 'hidden',
+        }}
+      >
+        {stars.map((star, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: star.left,
+              top: star.top,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              borderRadius: '50%',
+              backgroundColor: '#ffffff',
+              // @ts-ignore
+              '--star-base-opacity': star.opacity,
+              opacity: star.opacity,
+              animation: `star-twinkle ${star.duration} ${star.delay} ease-in-out infinite`,
+            }}
+          />
+        ))}
+      </div>
 
       {/* Header */}
       <div
