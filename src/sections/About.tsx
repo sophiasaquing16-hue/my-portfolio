@@ -6,12 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 const skills = [
   'React',
   'TypeScript',
-  'Node.js',
-  'Three.js',
-  'GraphQL',
-  'PostgreSQL',
-  'AWS',
-  'Figma',
+  'Python',
+  'MySQL',
+  'Java',
 ];
 
 const stats = [
