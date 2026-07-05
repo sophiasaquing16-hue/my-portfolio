@@ -15,9 +15,9 @@ const skills = [
 ];
 
 const stats = [
-  { value: '8+', label: 'Years of\nExperience' },
-  { value: '40+', label: 'Projects\nDelivered' },
-  { value: '15+', label: 'Happy\nClients' },
+  { value: '1.5', label: 'Years of\nExperience' },
+  { value: '2', label: 'Projects\nDelivered' },
+  { value: '15', label: 'Happy\nClients' },
 ];
 
 const About: React.FC = () => {
@@ -173,7 +173,7 @@ const About: React.FC = () => {
             }}
           >
             <img
-              src="/images/556267318_1810743853164563_9076768512108396100_n.jpg"
+              src="/images/saquing.jpeg"
               alt="Profile photo"
               style={{
                 width: '100%',
@@ -224,7 +224,7 @@ const About: React.FC = () => {
                 lineHeight: 1,
               }}
             >
-              8+
+              1.5
             </p>
             <p
               style={{
