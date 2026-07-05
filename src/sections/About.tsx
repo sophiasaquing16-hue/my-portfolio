@@ -5,10 +5,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   'React',
-  'TypeScript',
+  'TypeScript/JavaScript',
   'Python',
   'MySQL',
   'Java',
+  'HTML/CSS'
 ];
 
 const stats = [
