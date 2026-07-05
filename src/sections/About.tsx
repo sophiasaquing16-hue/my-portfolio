@@ -279,9 +279,10 @@ const About: React.FC = () => {
               marginBottom: '18px',
             }}
           >
-            With over 8 years of experience building for the web, I've developed
-            a deep appreciation for the craft of software — clean architecture,
-            thoughtful UX, and pixel-perfect execution.
+            Hi! I'm Sophia Marie E. Saquing, a third-year Computer Science student at Cagayan State 
+            University – Carig Campus with a strong interest in web development. I enjoy designing and building 
+            responsive, user-friendly websites and web applications while continuously improving 
+            my skills in modern web technologies.
           </p>
 
           <p
@@ -293,9 +294,9 @@ const About: React.FC = () => {
               marginBottom: '36px',
             }}
           >
-            I specialize in React ecosystems, real-time systems, and interactive
-            data visualization. My work lives at the boundary between what users
-            see and what makes it possible.
+            I am passionate about solving problems through clean, efficient code and creating 
+            digital solutions that provide a great user experience. My goal is to become a skilled 
+            Web Developer who develops innovative, accessible, and impactful web applications.
           </p>
 
           {/* Stats row */}
