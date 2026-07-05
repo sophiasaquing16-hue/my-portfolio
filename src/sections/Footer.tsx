@@ -185,18 +185,27 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <span
+                  <a
+                    href="/images/saquingsm%20resume.pdf"
+                    download
                     style={{
                       fontFamily: 'Inter, sans-serif',
                       fontWeight: 400,
                       fontSize: '0.875rem',
                       color: '#f4f4f5',
                       opacity: 0.6,
-                      cursor: 'default',
+                      textDecoration: 'none',
+                      transition: 'opacity 0.3s ease',
                     }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.opacity = '1')
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.opacity = '0.6')
+                    }
                   >
                     Download CV
-                  </span>
+                  </a>
                 </li>
               </ul>
             </div>
