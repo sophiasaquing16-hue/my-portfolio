@@ -1,3 +1,7 @@
+# to commit to production: git push -u production master
+# to commit to development: git push -u origin master
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
