@@ -33,7 +33,6 @@ const Process: React.FC = () => {
       animations.push(tween);
     });
 
-    // Header entrance
     if (headerRef.current) {
       const els = headerRef.current.querySelectorAll('.process-animate');
       gsap.fromTo(
@@ -63,16 +62,16 @@ const Process: React.FC = () => {
   const fontSize = isMobile ? '42' : '64';
   const paths = isMobile
     ? [
-        { id: 'path1', d: 'M 50 75 Q 400 45 750 75', text: 'Discover.' },
-        { id: 'path2', d: 'M 50 130 Q 400 100 750 130', text: 'Design.' },
-        { id: 'path3', d: 'M 50 185 Q 400 155 750 185', text: 'Develop.' },
-        { id: 'path4', d: 'M 50 240 Q 400 210 750 240', text: 'Deploy.' },
+        { id: 'path1', d: 'M 50 75 Q 400 45 750 75', text: 'Learn.' },
+        { id: 'path2', d: 'M 50 130 Q 400 100 750 130', text: 'Try.' },
+        { id: 'path3', d: 'M 50 185 Q 400 155 750 185', text: 'Fix.' },
+        { id: 'path4', d: 'M 50 240 Q 400 210 750 240', text: 'Repeat.' },
       ]
     : [
-        { id: 'path1', d: 'M 100 100 Q 600 50 1100 100', text: 'Discover.' },
-        { id: 'path2', d: 'M 100 170 Q 600 120 1100 170', text: 'Design.' },
-        { id: 'path3', d: 'M 100 240 Q 600 190 1100 240', text: 'Develop.' },
-        { id: 'path4', d: 'M 100 310 Q 600 260 1100 310', text: 'Deploy.' },
+        { id: 'path1', d: 'M 100 100 Q 600 50 1100 100', text: 'Learn.' },
+        { id: 'path2', d: 'M 100 170 Q 600 120 1100 170', text: 'Try.' },
+        { id: 'path3', d: 'M 100 240 Q 600 190 1100 240', text: 'Fix.' },
+        { id: 'path4', d: 'M 100 310 Q 600 260 1100 310', text: 'Repeat.' },
       ];
 
   return (
@@ -87,7 +86,6 @@ const Process: React.FC = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Background radial gradient */}
       <div
         style={{
           position: 'absolute',
@@ -101,7 +99,6 @@ const Process: React.FC = () => {
         }}
       />
 
-      {/* Decorative horizontal line */}
       <div
         style={{
           position: 'absolute',
@@ -115,10 +112,9 @@ const Process: React.FC = () => {
       />
 
       <div className="content-container" style={{ position: 'relative', zIndex: 1 }}>
-        {/* Header */}
         <div ref={headerRef} style={{ marginBottom: '80px' }}>
           <p className="process-animate label-text" style={{ marginBottom: '16px' }}>
-            HOW I WORK
+            HOW I'M LEARNING
           </p>
           <h2
             className="process-animate font-heading"
@@ -128,11 +124,10 @@ const Process: React.FC = () => {
               maxWidth: '640px',
             }}
           >
-            A Methodical Approach to Creative Problems
+            A small routine while I learn from scratch
           </h2>
         </div>
 
-        {/* SVG Path Reveal */}
         <svg
           ref={svgRef}
           className="process-svg"

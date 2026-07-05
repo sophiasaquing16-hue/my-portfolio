@@ -41,7 +41,6 @@ const Contact: React.FC = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Background radial gradient */}
       <div
         style={{
           position: 'absolute',
@@ -68,7 +67,7 @@ const Contact: React.FC = () => {
         }}
       >
         <p className="contact-animate label-text" style={{ marginBottom: '20px' }}>
-          LET'S BUILD SOMETHING
+          JUST GETTING STARTED
         </p>
         <h2
           className="contact-animate font-heading"
@@ -78,7 +77,7 @@ const Contact: React.FC = () => {
             marginBottom: '20px',
           }}
         >
-          Have a project in mind?
+          Feel free to say hello
         </h2>
         <p
           className="contact-animate"
@@ -91,8 +90,8 @@ const Contact: React.FC = () => {
             margin: '0 auto 40px',
           }}
         >
-          I'm always open to discussing new opportunities, creative
-          collaborations, or just having a good conversation about technology.
+          I am new to coding and still learning the basics, so I am mainly open
+          to kind feedback, encouragement, and genuine connections as I learn.
         </p>
         <div className="contact-animate">
           <a
@@ -104,7 +103,7 @@ const Contact: React.FC = () => {
               textDecoration: 'none',
             }}
           >
-            Start a Conversation
+            Send an Email
           </a>
         </div>
         <div className="contact-animate" style={{ marginTop: '24px' }}>
@@ -130,7 +129,7 @@ const Contact: React.FC = () => {
           </a>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

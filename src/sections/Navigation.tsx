@@ -14,7 +14,6 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
 
   const navLinks = [
     { label: 'About', target: '#about' },
-    { label: 'Experience', target: '#experience' },
     { label: 'Portfolio', target: '#portfolio' },
     { label: 'Contact', target: '#contact' },
   ];
@@ -174,7 +173,7 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
               opacity: 0,
             }}
           >
-            Let's Talk
+            Say Hello
           </button>
 
           {/* Mobile Hamburger */}
@@ -248,7 +247,7 @@ const Navigation: React.FC<NavigationProps> = ({ lenisRef }) => {
               animation: 'fadeInUp 0.5s ease forwards 0.4s',
             }}
           >
-            Let's Talk
+            Say Hello
           </button>
         </div>
       )}

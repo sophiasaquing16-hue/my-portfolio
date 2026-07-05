@@ -117,7 +117,7 @@ const Hero: React.FC<HeroProps> = ({ lenisRef }) => {
             className="hero-animate label-text"
             style={{ opacity: 0, marginBottom: '24px' }}
           >
-            FULL-STACK ENGINEER & CREATIVE TECHNOLOGIST
+            BEGINNER PORTFOLIO / FIRST WEBSITE
           </p>
 
           {/* Headline */}
@@ -132,7 +132,7 @@ const Hero: React.FC<HeroProps> = ({ lenisRef }) => {
               textWrap: 'balance',
             }}
           >
-            Crafting Digital Experiences That Resonate
+            A simple portfolio while I learn the basics
           </h1>
 
           {/* Subtitle */}
@@ -147,8 +147,8 @@ const Hero: React.FC<HeroProps> = ({ lenisRef }) => {
               margin: '0 auto 40px',
             }}
           >
-            I build performant web applications and interactive experiences at
-            the intersection of engineering precision and creative vision.
+            This website was put together for me as a starting point while I
+            learn more about coding and slowly build projects of my own.
           </p>
 
           {/* CTA Row */}
@@ -161,7 +161,7 @@ const Hero: React.FC<HeroProps> = ({ lenisRef }) => {
               className="gradient-btn"
               style={{ padding: '14px 32px', fontSize: '1rem' }}
             >
-              View My Work
+              View This Site
             </button>
             <button
               onClick={scrollToContact}
@@ -186,7 +186,7 @@ const Hero: React.FC<HeroProps> = ({ lenisRef }) => {
                 e.currentTarget.style.color = '#f4f4f5';
               }}
             >
-              Get In Touch
+              Say Hello
             </button>
           </div>
         </div>

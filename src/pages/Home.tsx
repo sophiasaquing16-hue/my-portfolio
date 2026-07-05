@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../sections/Navigation';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
-import Experience from '../sections/Experience';
 import SelectedWork from '../sections/SelectedWork';
 import Contact from '../sections/Contact';
 import Footer from '../sections/Footer';
@@ -45,7 +44,6 @@ const Home: React.FC = () => {
       <main>
         <Hero lenisRef={lenisRef} />
         <About />
-        <Experience />
         <SelectedWork />
         <Contact />
       </main>

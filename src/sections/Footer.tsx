@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                 opacity: 0.7,
               }}
             >
-              Full-Stack Engineer & Creative Technologist
+              Still learning the basics
             </span>
           </div>
 
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                 Navigate
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                {['Work', 'About', 'Process', 'Contact'].map((item) => (
+                {['Portfolio', 'About', 'Process', 'Contact'].map((item) => (
                   <li key={item} style={{ marginBottom: '8px' }}>
                     <button
                       onClick={() => scrollTo(`#${item.toLowerCase()}`)}
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                 Social
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                {['GitHub', 'LinkedIn', 'Twitter/X', 'Dribbble'].map(
+                {['GitHub', 'Facebook', 'Instagram', 'Email'].map(
                   (item) => (
                     <li key={item} style={{ marginBottom: '8px' }}>
                       <span
@@ -186,8 +186,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="/images/saquingsm%20resume.pdf"
-                    download
+                    href="#portfolio"
                     style={{
                       fontFamily: 'Inter, sans-serif',
                       fontWeight: 400,
@@ -204,7 +203,7 @@ const Footer: React.FC = () => {
                       (e.currentTarget.style.opacity = '0.6')
                     }
                   >
-                    Download CV
+                    See This Website
                   </a>
                 </li>
               </ul>
@@ -214,7 +213,7 @@ const Footer: React.FC = () => {
           {/* Status Badge */}
           <div className="footer-badge">
             <OrbitingTextBadge
-              text="OPEN TO WORK \u2022 "
+              text="LEARNING STEP BY STEP \u2022 "
               radius={50}
               duration={15}
               centerSize={40}
@@ -256,7 +255,7 @@ const Footer: React.FC = () => {
               opacity: 0.5,
             }}
           >
-            Built with React & Three.js
+            First website, more to come.
           </span>
         </div>
       </div>
