@@ -13,9 +13,9 @@ const skills = [
 ];
 
 const stats = [
-  { value: '1.5', label: 'Years of\nExperience' },
+  { value: '0.4', label: 'Years of\nExperience' },
   { value: '2', label: 'Projects\nDelivered' },
-  { value: '15', label: 'Happy\nClients' },
+  { value: '1', label: 'Happy\nClients' },
 ];
 
 const About: React.FC = () => {
@@ -222,7 +222,7 @@ const About: React.FC = () => {
                 lineHeight: 1,
               }}
             >
-              1.5
+              0.4
             </p>
             <p
               style={{
